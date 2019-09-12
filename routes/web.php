@@ -49,5 +49,5 @@ Route::post('/wechat/do_pushTagMsg','TagController@do_pushTagMsg');
 Route::get('/wechat/addsend','TagController@addsend');
 Route::get('/wechat/do_addsend','TagController@do_addsend');
 
-//
-Route::any('/wechat/event','EventController@event');
+
+
