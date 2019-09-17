@@ -32,7 +32,7 @@ class LoginController extends Controller
         $wechat_user_info = json_decode($user_info,1);
         // dd($wechat_user_info);
         $openid=$re['openid'];
-        $wechat_info=DB::connection('wechat')->table('user_wechat')->where(['openid'=>$openid])->first();
+        $wechat_info=DB::connection('1902_weixin')->table('user_wechat')->where(['openid'=>$openid])->first();
         // dd($wechat_info);
         if(!empty($wechat_info)){
             //存在,登录
@@ -41,13 +41,13 @@ class LoginController extends Controller
         }else{
             //不存在,注册,登录
             //插入user表数据一条
-            DB::connection('wechat')->beginTransaction();//打开事物
-            $uid = DB::connection('wechat')->table('user')->insertGetId([
+            DB::connection('1902_weixin')->beginTransaction();//打开事物
+            $uid = DB::connection('1902_weixin')->table('user')->insertGetId([
                 'name'=>$wechat_user_info['nickname'],
                 'password'=>'',
                 'reg_time'=>time()
             ]);
-            $insert_result = DB::connection('wechat')->table('user_wechat')->insert([
+            $insert_result = DB::connection('1902_weixin')->table('user_wechat')->insert([
                 'uid'=>$uid,
                 'openid'=>$openid
             ]);

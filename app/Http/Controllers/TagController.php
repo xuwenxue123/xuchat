@@ -49,13 +49,56 @@ class TagController extends Controller
         dd($res);
     }
     
+    public function tag_openid(Request $request)
+    {
+        $req = $request->all();
+        $url = 'https://api.weixin.qq.com/cgi-bin/tags/members/batchtagging?access_token='.$this->tools->get_wechat_access_token();
+        dd($url);
+        $data = [
+            'openid_list'=>$req['openid_list'],
+            'tagid'=>$req['tagid']
+        ];
+        dd($data);
+        $re = $this->tools->curl_post($url,json_encode($data));
+        $result = json_decode($re,1);
+        dd($result);
+    }
+
     //标签下粉丝列表
     public function tag_openid_list(Request $request)
     {
         $req = $request->all();
-        dd($req);
+        // dd($req);
+        $url ='https://api.weixin.qq.com/cgi-bin/user/tag/get?access_token='.$this->tools->get_wechat_access_token();
+        // dd($url);
+        $data = [
+            'tagid' => $req['tag_id'],
+            'next_openid' => ''
+        ];
+        $re = $this->tools->curl_post($url,json_encode($data));
+        $result = json_decode($re,1);
+        dd($result);
     }
-
+     
+    public function user_tag_list(Request $request)
+    {
+       $req =$request->all();
+       $url = 'https://api.weixin.qq.com/cgi-bin/tags/getidlist?access_token='.$this->tools->get_wechat_access_token();
+       $data = [
+           'openid'=>$req['openid']
+       ];
+       $re = $this->tools->curl_post($url,json_encode($data));
+       $result = json_decode($re,1);
+       $tag = file_get_contents('https://api.weixin.qq.com/cgi-bin/tags/get?access_token='.$this->tools->get_wechat_access_token());
+       $tag_result = json_decode($tag,1);
+       $tag_arr = [];
+       foreach($tag_result['tags'] as $v){
+           $tag_arr[$v['id']] = $v['name'];
+       }
+       foreach($result['tagid_list'] as $v){
+           echo $tag_arr[$v]."<br/>";
+       }
+    }
 
     //群发消息
     public function pushTagMsg(Request $request)
@@ -103,8 +146,7 @@ class TagController extends Controller
         dd($request);
     }
     
-    //标签修改
-    
+    //标签修改 
     public function tag_update(Request $request)
     {   
         $id =$request->id;
@@ -126,56 +168,56 @@ class TagController extends Controller
     }
 
     
-        //标签修改执行
-        public function do_update_tag(Request $request)
-        {
-            $name=$request->all(['tag_name']);
-            $name=implode('',$name);
-            // dd($name);
-            $id=$request->all(['id']);
-            $id=implode('',$id);
-            // dd($id);
-            $url="https://api.weixin.qq.com/cgi-bin/tags/update?access_token=".$this->tools->get_wechat_access_token();
-            $data=[
-                "tag" => [ "id"=>$id ,"name"=>$name]
-            ];
-            $re=$this->tools->curl_post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
-            $re=json_decode($re,1);
-            return redirect('wechat/tag_list');
-        }
+    //标签修改执行
+    public function do_update_tag(Request $request)
+    {
+        $name=$request->all(['tag_name']);
+        $name=implode('',$name);
+        // dd($name);
+        $id=$request->all(['id']);
+        $id=implode('',$id);
+        // dd($id);
+        $url="https://api.weixin.qq.com/cgi-bin/tags/update?access_token=".$this->tools->get_wechat_access_token();
+        $data=[
+            "tag" => [ "id"=>$id ,"name"=>$name]
+        ];
+        $re=$this->tools->curl_post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
+        $re=json_decode($re,1);
+        return redirect('wechat/tag_list');
+    }
        
-        //模板消息
-        public function addsend()
-        {
-            return view('Send.addSend');
-        }
+    //模板消息
+    public function addsend()
+    {
+        return view('Send.addSend');
+    }
         
-        //模板消息执行发送
-        public function do_addsend()
-        {
-            $openid ='oO9fgw0GBsONmgGqBbwD2pZJAl8g';
-            $url ='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$this->tools->get_wechat_access_token();
-            $data =[
-                'touser'=>$openid,
-                'template_id'=>'OCCWV7ddvyjTmzRXFGGrm7fm0sCQzkjW96xQTuUWb84',
-                'url'=>'http://www.chat.com',
-                'data'=>[
-                    'first'=>[
-                        'value'=>'first',
-                        'color'=>'',
-                    ],
-                    'keyword1'=>[
-                        'value'=>'keyword1',
-                        'color'=>'',
-                    ],
-                    'keyword2'=>[
-                        'value'=>'keyword2',
-                        'color'=>'',
-                    ]
+    //模板消息执行发送
+    public function do_addsend()
+    {
+        $openid ='oO9fgw0GBsONmgGqBbwD2pZJAl8g';
+        $url ='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$this->tools->get_wechat_access_token();
+        $data =[
+            'touser'=>$openid,
+            'template_id'=>'OCCWV7ddvyjTmzRXFGGrm7fm0sCQzkjW96xQTuUWb84',
+            'url'=>'http://www.chat.com',
+            'data'=>[
+                'first'=>[
+                    'value'=>'first',
+                    'color'=>'',
+                ],
+                'keyword1'=>[
+                    'value'=>'keyword1',
+                    'color'=>'',
+                ],
+                'keyword2'=>[
+                    'value'=>'keyword2',
+                    'color'=>'',
                 ]
-            ];
-            $re=$this->tools->curl_post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
-            $result =json_decode($re,1);
-            dd($result);
-        }
+            ]
+        ];
+        $re=$this->tools->curl_post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
+        $result =json_decode($re,1);
+        dd($result);
+    }
 }
