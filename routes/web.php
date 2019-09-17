@@ -32,6 +32,8 @@ route::get('/login/loging','wechat\LoginController@loging');//授权登录
 route::get('logss','wechat\LoginController@logss');
 route::get('code','wechat\LoginController@code');
 
+
+////////////////////////////////////////////////////////////////
 //标签
 Route::get('/wechat/tag_list','TagController@tag_list');//获取公众号列表
 Route::get('/wechat/add_tag','TagController@add_tag');//标签添加
@@ -51,11 +53,16 @@ Route::post('/wechat/do_pushTagMsg','TagController@do_pushTagMsg');//群发添�
 Route::get('/wechat/addsend','TagController@addsend');
 Route::get('/wechat/do_addsend','TagController@do_addsend');
 
-
+///////////////////////////////////////////////////////////////////
 //留言
 Route::get('logsing','LiuYanController@logsing');//留言登陆
 Route::get('codes','LiuYanController@codes');
-
 Route::get('/liuyan/index','LiuYanController@index'); //留言板主页
 Route::get('/liuyan/send','LiuYanController@send');//留言添加
 Route::post('/liuyan/do_send','LiuYanController@do_send');//留言执行添加
+
+///////////////////////////////////////////////////
+Route::prefix('agent')->namespace('wechat')->group(function(){
+    Route::get('list','AgentController@agent_list');                         // 获取关注用户视图
+    Route::get('create_qrcode','AgentController@create_qrcode');             // 创建二维码
+});
