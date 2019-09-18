@@ -63,6 +63,11 @@ Route::post('/liuyan/do_send','LiuYanController@do_send');//留言执行添加
 
 ///////////////////////////////////////////////////
 Route::prefix('agent')->namespace('wechat')->group(function(){
-    Route::get('list','AgentController@agent_list');                         // 获取关注用户视图
+    Route::get('list','AgentController@agent_list');// 获取关注用户视图
     Route::get('create_qrcode','AgentController@create_qrcode');             // 创建二维码
 });
+
+Route::post('/wechat/menu','wechat\MenuController@menu');//创建菜单
+Route::get('/wechat/menu_list','wechat\MenuController@menu_list');//菜单列表
+Route::get('/wechat/load_menu','wechat\MenuController@load_menu');
+Route::get('/wechat/del_menu','wechat\MenuController@del_menu');
