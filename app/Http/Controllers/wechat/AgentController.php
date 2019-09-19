@@ -1,9 +1,10 @@
 <?php
+
 namespace App\Http\Controllers\wechat;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use App\Http\Controllers\Controller;
 use App\Tools\Tools;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\admin\Users;
 use DB;
 class AgentController extends Controller
@@ -49,7 +50,7 @@ class AgentController extends Controller
         // 修改数据
         $re = Users::where('id',$id)->update([
             'qrcode_url' => '/storage'.$path,
-            'reg_time' => time()
+            'add_qrcode_time' => time()
         ]);
         if ($re) {
             return redirect('/agent/list');

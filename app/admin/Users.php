@@ -4,6 +4,6 @@ use Illuminate\Database\Eloquent\Model;
 class Users extends Model
 {
     protected $pk = 'id';
-    protected $table = 'Users';
+    protected $table = 'users';
     public $timestamps = false;
 }
