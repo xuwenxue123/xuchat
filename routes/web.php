@@ -12,6 +12,8 @@
 */
 
 Route::get('/', function () {
+    $yes =strtotime('-1 days');
+    echo date('Y-m-d H:i:s',$yes);
     return view('welcome');
 });
 
@@ -21,9 +23,9 @@ Route::get('wechat/get_access_token','WechatController@get_access_token'); //获
 Route::get('/wechat/get_user_list','WechatController@get_user_list'); //获取用户列表
 Route::get('/wechat/get_user_info','WechatController@get_user_info');//详情
 
-Route::get('/wechat/clear_api','WechatController@clear_api');
-Route::get('/wechat/source','WechatController@wechat_source'); //素材管理
-Route::get('/wechat/download_source','WechatController@download_source'); //下载资源
+// Route::get('/wechat/clear_api','WechatController@clear_api');
+// Route::get('/wechat/source','WechatController@wechat_source'); //素材管理
+// Route::get('/wechat/download_source','WechatController@download_source'); //下载资源
 
 Route::get('/wechat/upload','WechatController@upload'); //上传
 Route::post('/wechat/do_upload','WechatController@do_upload'); //上传
@@ -64,10 +66,19 @@ Route::post('/liuyan/do_send','LiuYanController@do_send');//留言执行添加
 ///////////////////////////////////////////////////
 Route::prefix('agent')->namespace('wechat')->group(function(){
     Route::get('list','AgentController@agent_list');// 获取关注用户视图
-    Route::get('create_qrcode','AgentController@create_qrcode');             // 创建二维码
+    Route::get('create_qrcode','AgentController@create_qrcode');// 创建二维码
 });
 
 Route::post('/wechat/menu','wechat\MenuController@menu');//创建菜单
 Route::get('/wechat/menu_list','wechat\MenuController@menu_list');//菜单列表
 Route::get('/wechat/load_menu','wechat\MenuController@load_menu');
 Route::get('/wechat/del_menu','wechat\MenuController@del_menu');
+
+
+//周考试题
+Route::get('/Kao/kao_login','Kao\KaoshiController@kao_login');//第三方授权登录
+Route::get('kao_logss','Kao\KaoshiController@kao_logss');
+Route::get('kao_code','Kao\KaoshiController@kao_code');
+Route::get('kao_tag','Kao\KaoshiController@kao_tag');//创建标签
+Route::post('do_kao_tag','Kao\KaoshiController@do_kao_tag');//创建标签执行
+

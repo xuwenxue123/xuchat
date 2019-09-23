@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Tools\Tools;
+use DB;
 class TagController extends Controller
 {   
 
@@ -18,6 +19,7 @@ class TagController extends Controller
         $url ='https://api.weixin.qq.com/cgi-bin/tags/get?access_token='.$this->tools->get_wechat_access_token();
         $re =file_get_contents($url);
         $result=json_decode($re,1);
+        // dd($result);
         return view('Tag.tagList',['info'=>$result['tags']]);
     }
 
@@ -51,24 +53,32 @@ class TagController extends Controller
     
     public function tag_openid(Request $request)
     {
-        $req = $request->all();
+        $res=$request->all();
+        // dd($request->all()['tagid']);
+
+        //$openid_info = DB::table('wechat_openid')->whereIn('id',$request->all()['openid_list'])->select(['openid'])->get()->toArray();
+        // $openid_list = [];
+        // foreach($openid_info as $v){
+        //     $openid_list[] = $v->openid;
+        // }
         $url = 'https://api.weixin.qq.com/cgi-bin/tags/members/batchtagging?access_token='.$this->tools->get_wechat_access_token();
-        dd($url);
+        // dd($url);
         $data = [
-            'openid_list'=>$req['openid_list'],
-            'tagid'=>$req['tagid']
+            'openid_list'=>$res['openid_list'],
+            'tagid'=>$request->all()['tagid'],
         ];
-        dd($data);
+        // dd($data);
+        //dd($data);
         $re = $this->tools->curl_post($url,json_encode($data));
-        $result = json_decode($re,1);
-        dd($result);
+        //  dd($re);
+        dd(json_decode($re,1));
     }
 
     //标签下粉丝列表
     public function tag_openid_list(Request $request)
     {
         $req = $request->all();
-        // dd($req);
+        dd($req);
         $url ='https://api.weixin.qq.com/cgi-bin/user/tag/get?access_token='.$this->tools->get_wechat_access_token();
         // dd($url);
         $data = [
@@ -82,22 +92,28 @@ class TagController extends Controller
      
     public function user_tag_list(Request $request)
     {
-       $req =$request->all();
-       $url = 'https://api.weixin.qq.com/cgi-bin/tags/getidlist?access_token='.$this->tools->get_wechat_access_token();
-       $data = [
-           'openid'=>$req['openid']
-       ];
-       $re = $this->tools->curl_post($url,json_encode($data));
-       $result = json_decode($re,1);
-       $tag = file_get_contents('https://api.weixin.qq.com/cgi-bin/tags/get?access_token='.$this->tools->get_wechat_access_token());
-       $tag_result = json_decode($tag,1);
-       $tag_arr = [];
-       foreach($tag_result['tags'] as $v){
-           $tag_arr[$v['id']] = $v['name'];
-       }
-       foreach($result['tagid_list'] as $v){
-           echo $tag_arr[$v]."<br/>";
-       }
+        // echo 111;
+        $req = $request->all();
+        // dd($req);
+        $url = 'https://api.weixin.qq.com/cgi-bin/tags/getidlist?access_token='.$this->tools->get_wechat_access_token();
+        // dd($url);
+        $data = [
+            'openid'=>$req['openid']
+        ];
+        // dd($data);
+        $re = $this->tools->curl_post($url,json_encode($data));
+        // dd($re);
+        $result = json_decode($re,1);
+        // dd($result);
+        $tag = file_get_contents('https://api.weixin.qq.com/cgi-bin/tags/get?access_token='.$this->tools->get_wechat_access_token());
+        $tag_result = json_decode($tag,1);
+        $tag_arr = [];
+        foreach($tag_result['tags'] as $v){
+            $tag_arr[$v['id']] = $v['name'];
+        }
+        foreach($result['tagid_list'] as $v){
+            echo $tag_arr[$v]."<br/>";
+        }
     }
 
     //群发消息
@@ -111,7 +127,7 @@ class TagController extends Controller
     public function do_pushTagMsg(Request $request)
     {   
         $req =$request->all();
-        // dd($req)
+        // dd($req);
         $url='https://api.weixin.qq.com/cgi-bin/message/mass/sendall?access_token='.$this->tools->get_wechat_access_token();
         $data =[
             'filter'=>[
@@ -123,6 +139,7 @@ class TagController extends Controller
             ],
             'msgtype'=>'text'
         ];
+        // dd($data);
         $re =$this->tools->curl_post($url,json_encode($data));
         $result=json_decode($re,1);
         dd($result);
@@ -143,7 +160,7 @@ class TagController extends Controller
         $re =$this->tools->curl_post($url,json_encode($data));
         // dd($re);
         $result=json_decode($re,1);
-        dd($request);
+        return redirect('/wechat/tag_list');
     }
     
     //标签修改 

@@ -8,6 +8,7 @@
             <form action="{{url('/wechat/tag_openid')}}" method="post">
              @csrf
              <input type="submit" value="提交">
+             <input type="hidden" name="tagid" value="{{$tagid}}">
             <table border="1">
                 <tr>
                     <td></td>

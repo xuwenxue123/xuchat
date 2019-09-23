@@ -21,8 +21,10 @@ class WechatController extends Controller
     /**
      * 获取用户列表
      */
-    public function get_user_list()
+    public function get_user_list(Request $request)
     {   
+        $res=$request->all();
+        // dd($res);
         $result = file_get_contents('https://api.weixin.qq.com/cgi-bin/user/get?access_token='.$this->tools->get_wechat_access_token().'&next_openid=');
         // dd($result);
         $re = json_decode($result,1);
@@ -37,7 +39,7 @@ class WechatController extends Controller
         }
         // dd($last_info);
         // dd($re['data']['openid']);
-        return view('Wechat.userList',['info'=>$last_info]);
+        return view('Wechat.userList',['info'=>$last_info],['tagid'=>$res['tag_id']]);
     }
     /**
      * 获取access_token
