@@ -44,8 +44,8 @@ class KaoshiController extends Controller
         if(!empty($wechat_info)){
             //存在,登录
             $request->session()->put('uid',$wechat_info->uid);
-            //  return redirect('/wechat/get_user_list');//主页
-            echo "ok";
+             return redirect('/wechat/get_user_list');//主页
+            // echo "ok";
         }else{
             //不存在,注册,登录
             //插入user表数据一条
