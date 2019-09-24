@@ -11,6 +11,7 @@ class EventController extends Controller
      */
     public function event()
     {
+	echo $_GET['echostr'];
         $xml_string = file_get_contents('php://input');  //获取
         $wechat_log_psth = storage_path('logs/wechat/'.date('Y-m-d').'.log');
         file_put_contents($wechat_log_psth,"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n",FILE_APPEND);
