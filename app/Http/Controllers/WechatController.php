@@ -39,7 +39,7 @@ class WechatController extends Controller
         }
         // dd($last_info);
         // dd($re['data']['openid']);
-        return view('Wechat.userList',['info'=>$last_info],['tagid'=>$res['tag_id']]);
+        return view('Wechat.userList',['info'=>$last_info,'tagid'=>isset($res['tag_id'])?$res['tag_id']:'']);
     }
     /**
      * 获取access_token

@@ -82,3 +82,10 @@ Route::get('kao_code','Kao\KaoshiController@kao_code');
 Route::get('kao_tag','Kao\KaoshiController@kao_tag');//创建标签
 Route::post('do_kao_tag','Kao\KaoshiController@do_kao_tag');//创建标签执行
 
+
+
+//exam
+Route::get('/Exam/exam_login','Exam\ExamController@exam_login');//第三方授权登录
+Route::get('exam_logss','Exam\ExamController@exam_logss');
+Route::get('exam_code','Exam\ExamController@exam_code');
+

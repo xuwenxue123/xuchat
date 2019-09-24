@@ -212,6 +212,33 @@ class TagController extends Controller
     //模板消息执行发送
     public function do_addsend()
     {
+        // $openid ='oO9fgw0GBsONmgGqBbwD2pZJAl8g';
+        // $url ='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$this->tools->get_wechat_access_token();
+        // $data =[
+        //     'touser'=>$openid,
+        //     'template_id'=>'OCCWV7ddvyjTmzRXFGGrm7fm0sCQzkjW96xQTuUWb84',
+        //     'url'=>'http://www.chat.com',
+        //     'data'=>[
+        //         'first'=>[
+        //             'value'=>'first',
+        //             'color'=>'',
+        //         ],
+        //         'keyword1'=>[
+        //             'value'=>'keyword1',
+        //             'color'=>'',
+        //         ],
+        //         'keyword2'=>[
+        //             'value'=>'keyword2',
+        //             'color'=>'',
+        //         ]
+        //     ]
+        // ];
+        // $re=$this->tools->curl_post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
+        // $result =json_decode($re,1);
+        // dd($result);
+
+        $data =\Cache::get('data');
+        if($data){
         $openid ='oO9fgw0GBsONmgGqBbwD2pZJAl8g';
         $url ='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$this->tools->get_wechat_access_token();
         $data =[
@@ -235,6 +262,7 @@ class TagController extends Controller
         ];
         $re=$this->tools->curl_post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
         $result =json_decode($re,1);
-        dd($result);
+        \Cache::put('data',$result,3600);
+      }
     }
 }
