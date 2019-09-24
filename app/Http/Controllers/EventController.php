@@ -36,6 +36,7 @@ class EventController extends Controller
                     DB::table('user')->where(['id' => $share_code])->increment('share_num', 1);
                     DB::table('wechat_openid')->insert([
                         'openid' => $user_openid,
+                        'add_time' => time(),
                         'add_time' => time()
                     ]);
                 }
