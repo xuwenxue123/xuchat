@@ -41,7 +41,7 @@ class AgentController extends Controller
                 ]
             ]
         ];
-//        dd($data);
+        //dd($data);
         $res = $this->tools->curl_post($url,json_encode($data));
         $result = json_decode($res,1);
         $qrcode_info = file_get_contents('https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket='.urlencode($result['ticket']));
@@ -50,7 +50,7 @@ class AgentController extends Controller
         // 修改数据
         $re = Users::where('id',$id)->update([
             'qrcode_url' => '/storage'.$path,
-            'add_qrcode_time' => time()
+            'reg_time' => time()
         ]);
         if ($re) {
             return redirect('/agent/list');
