@@ -9,13 +9,17 @@ class EventController extends Controller
      /**
      * 接收微信发送的消息【用户互动】
      */
-    public function event()
+     public function event()
     {
+//        echo $_GET['echostr'];
+//        die();
+//        echo "您已经进入接口配置的url";
+//        echo 1;dd();
         $xml_string = file_get_contents('php://input');  //获取
         $wechat_log_psth = storage_path('logs/wechat/'.date('Y-m-d').'.log');
-        // file_put_contents($wechat_log_psth,"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n",FILE_APPEND);
+        file_put_contents($wechat_log_psth,"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n",FILE_APPEND);
         file_put_contents($wechat_log_psth,$xml_string,FILE_APPEND);
-        // file_put_contents($wechat_log_psth,"\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n\n",FILE_APPEND);
+        file_put_contents($wechat_log_psth,"\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n\n",FILE_APPEND);
         //dd($xml_string);
         $xml_obj = simplexml_load_string($xml_string,'SimpleXMLElement',LIBXML_NOCDATA);
         $xml_arr = (array)$xml_obj;
@@ -31,7 +35,7 @@ class EventController extends Controller
                 if (empty($wechat_openid)) {
                     DB::table('user')->where(['id' => $share_code])->increment('share_num', 1);
                     DB::table('wechat_openid')->insert([
-                        'openid' => $user_openid,
+                       'openid' => $user_openid,
                         'add_time' => time()
                     ]);
                 }
