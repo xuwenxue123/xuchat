@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4283c7e5-5955-40bb-995d-954d6ce11f1a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Run/RunController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Run/RunController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Run/run_add_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Run/run_add_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Run/run_menu.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,43 +33,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Run/RunController.php">
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/TagController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#44#72#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-840">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/config/app.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/Controller.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/LiuYanController.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="true" current-in-tab="true">
-        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/wechat/MenuController.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="776">
-              <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="25" />
+            <state relative-caret-position="653">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
             </state>
           </provider>
         </entry>
@@ -77,6 +57,8 @@
     <findStrings>
       <find>connection</find>
       <find>table</find>
+      <find>load_menu</find>
+      <find>eventkey</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -88,15 +70,18 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AgentController.php" />
         <option value="$PROJECT_DIR$/resources/views/Agent/userList.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/wechat/MenuController.php" />
         <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/resources/views/Agent/userList.blade.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/wechat/AgentController.php" />
         <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/wechat/AgentController.php" />
         <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Console/Kernel.php" />
-        <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/EventController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Run/RunController.php" />
+        <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/wechat/MenuController.php" />
+        <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/EventController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/resources/views/Run/run_add_menu.blade.php" />
+        <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/routes/web.php" />
       </list>
     </option>
   </component>
@@ -217,49 +202,7 @@
           <expand>
             <path>
               <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Kao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -319,14 +262,15 @@
       <workItem from="1569379636765" duration="4418000" />
       <workItem from="1569384240703" duration="11296000" />
       <workItem from="1569413172438" duration="2953000" />
-      <workItem from="1569460394651" duration="2038000" />
+      <workItem from="1569460394651" duration="8143000" />
+      <workItem from="1569481160509" duration="585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53443000" />
+    <option name="totallyTimeSpent" value="60133000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -339,29 +283,6 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1748401" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3275488" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932975" weight="0.26681128" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067025" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info active="true" anchor="right" id="Remote Host" order="4" visible="true" weight="0.119936034" />
-    </layout>
-    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" weight="0.1748401" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -371,19 +292,19 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3275488" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932975" weight="0.3264642" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3275488" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932975" weight="0.26681128" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067025" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.3275488" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
       <window_info active="true" anchor="right" id="Remote Host" order="4" visible="true" weight="0.119936034" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -494,16 +415,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RUn.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="776">
-          <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RUn.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Run/RunController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -511,6 +423,13 @@
           <folding>
             <element signature="e#44#72#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
