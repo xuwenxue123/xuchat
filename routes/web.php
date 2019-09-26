@@ -89,3 +89,7 @@ Route::get('/Exam/exam_login','Exam\ExamController@exam_login');//第三方授�
 Route::get('exam_logss','Exam\ExamController@exam_logss');
 Route::get('exam_code','Exam\ExamController@exam_code');
 
+
+//run月考
+Route::get('/Run/run_menu','Run\RunController@run_menu');
+Route::post('/Run/run_add_menu','Run\RunController@run_add_menu');
