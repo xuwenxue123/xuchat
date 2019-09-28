@@ -276,7 +276,35 @@ class WechatController extends Controller
         curl_close($curl);
         return $data;
     }
-    
+
+    //末班消息
+    public function push_template_message()
+    {
+        $openid = 'oO9fgw104DI4Ps3BhjJsgK0bgv8I';
+        $url = 'https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$this->tools->get_wechat_access_token();
+        $data = [
+            'touser'=>$openid,
+            'template_id'=>'OCCWV7ddvyjTmzRXFGGrm7fm0sCQzkjW96xQTuUWb84',
+            'url'=>'http://www.chat.com',
+            'data'=>[
+                'first'=>[
+                    'value'=>'first',
+                    'color'=>''
+                ],
+                'keyword1'=>[
+                    'value'=>'keyword1',
+                    'color'=>''
+                ],
+                'keyword2'=>[
+                    'value'=>'keyword2',
+                    'color'=>''
+                ]
+            ]
+        ];
+        $re = $this->tools->curl_post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
+        $result = json_decode($re,1);
+        dd($result);
+    }  
 }
 
 

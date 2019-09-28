@@ -15,7 +15,7 @@ class LoginController extends Controller
 
     public function logss()
     {
-        $redirect_uri="http://www.blog.com/code";
+        $redirect_uri="http://www.chat.com/code";
         $url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxabb0532144bac1c9&redirect_uri=".urlencode($redirect_uri)."&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";//用户同意授权，获取code
         //dd($url);
         header('location:'.$url);

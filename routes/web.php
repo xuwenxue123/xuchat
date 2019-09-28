@@ -23,9 +23,9 @@ Route::get('wechat/get_access_token','WechatController@get_access_token'); //获
 Route::get('/wechat/get_user_list','WechatController@get_user_list'); //获取用户列表
 Route::get('/wechat/get_user_info','WechatController@get_user_info');//详情
 
-// Route::get('/wechat/clear_api','WechatController@clear_api');
-// Route::get('/wechat/source','WechatController@wechat_source'); //素材管理
-// Route::get('/wechat/download_source','WechatController@download_source'); //下载资源
+Route::get('/wechat/clear_api','WechatController@clear_api');
+Route::get('/wechat/source','WechatController@wechat_source'); //素材管理
+Route::get('/wechat/download_source','WechatController@download_source'); //下载资源
 
 Route::get('/wechat/upload','WechatController@upload'); //上传
 Route::post('/wechat/do_upload','WechatController@do_upload'); //上传
@@ -91,5 +91,9 @@ Route::get('exam_code','Exam\ExamController@exam_code');
 
 
 // //run月考
-Route::post('/Run/run_add_menu','Run\RunController@run_add_menu');
+Route::get('/Run/run_add_menu','Run\RunController@run_add_menu');
+
+//模板消息
+
+Route::get('/wechat/push_template_message','WechatController@push_template_message');//详情
 
