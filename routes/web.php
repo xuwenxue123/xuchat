@@ -97,3 +97,14 @@ Route::get('/Run/run_add_menu','Run\RunController@run_add_menu');
 
 Route::get('/wechat/push_template_message','WechatController@push_template_message');//详情
 
+
+
+
+//API
+Route::get('/Login/adminLogin','Login\LoginController@adminLogin');//后台登录
+Route::post('/Login/adminLogin_do','Login\LoginController@adminLogin_do');//后台登录执行
+Route::get('/Index/index','Index\IndexController@index');//前台
+Route::get('/Index/send','Login\LoginController@send');//发送验证码
+Route::get('/Login/bind','Login\LoginController@bind');//绑定账号
+Route::any('/Login/do_bind','Login\LoginController@do_bind');//绑定账号
+

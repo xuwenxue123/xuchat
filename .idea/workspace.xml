@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4283c7e5-5955-40bb-995d-954d6ce11f1a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Run/RunController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Run/RunController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WechatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WechatController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/wechat/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/wechat/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LaController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,69 +31,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/resources/views/wewe/a.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/nvnv/NaController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#45#73#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/wechat/MenuController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="116" column="47" lean-forward="true" selection-start-line="116" selection-start-column="47" selection-end-line="116" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="true" current-in-tab="true">
-        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/EventController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="126" column="61" lean-forward="true" selection-start-line="126" selection-start-column="61" selection-end-line="126" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/resources/views/Menu/menuList.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-307">
-              <caret line="27" column="36" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-728">
-              <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/WechatController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="863">
-              <caret line="334" column="20" lean-forward="true" selection-start-line="334" selection-start-column="20" selection-end-line="334" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -105,6 +42,7 @@
       <find>wechat/get_user_list</find>
       <find>您已签到</find>
       <find>event</find>
+      <find>dd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,12 +65,12 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Run/RunController.php" />
         <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/resources/views/Run/run_add_menu.blade.php" />
         <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/resources/views/Run/run_login.blade.php" />
-        <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/Run/RunController.php" />
         <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Console/Kernel.php" />
         <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/nvnv/NaController.php" />
         <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/resources/views/Menu/menuList.blade.php" />
         <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/routes/web.php" />
         <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/WechatController.php" />
+        <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/Run/RunController.php" />
         <option value="&lt;bcb83c4c-bc8c-4688-8d81-b9b4ff0a1d9f&gt;/app/Http/Controllers/EventController.php" />
       </list>
     </option>
@@ -238,8 +176,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="40" />
-    <option name="y" value="508" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1594" />
     <option name="height" value="644" />
   </component>
@@ -248,50 +186,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Run" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -303,7 +198,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -353,12 +248,14 @@
       <workItem from="1569593260371" duration="2720000" />
       <workItem from="1569629856429" duration="220000" />
       <workItem from="1569630098003" duration="621000" />
-      <workItem from="1569630787682" duration="7876000" />
+      <workItem from="1569630787682" duration="10083000" />
+      <workItem from="1570409528842" duration="2615000" />
+      <workItem from="1570506337993" duration="906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83498000" />
+    <option name="totallyTimeSpent" value="89226000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -371,7 +268,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.1748401" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -393,31 +289,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info active="true" anchor="right" id="Remote Host" order="4" visible="true" weight="0.13539445" />
+      <window_info active="true" anchor="right" id="Remote Host" order="4" visible="true" weight="0.110341154" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1748401" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3275488" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3275488" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932975" weight="0.26681128" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067025" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.3275488" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info active="true" anchor="right" id="Remote Host" order="4" visible="true" weight="0.13539445" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -543,5 +416,20 @@
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
